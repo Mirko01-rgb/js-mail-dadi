@@ -20,41 +20,59 @@
     </style>
   </head>
   <body>
+
     <h1>The GAMING is starting:</h1>
     <p id="computer"></p>
     <p id="player"></p>
     <p id ="result"></p>
+
+
     <script type="text/javascript">
 
 
+    //1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
+    //indici            0               1                  2                 3
+    var email = ['prova1@gmail.com', 'prova2@gmail.com', 'prova3@gmail.com', 'prova4@gmail.com' ]; //lenght 4
+    var request = prompt(" Inserisci la tua email:  ");
+    for( var i=0; i<email.length; i++ ){
+      // console.log(i, email[i]);
+      if (request == email){
+        console.log('ACCESSO AUTORIZZATO');
+      }
+
+      
+    }
+
+
+
     // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
-    var min=0;
-    var max=6-0;
-
-    var computer = Math.floor(Math.random()*max) + min;
-    document.getElementById('computer').innerHTML= 'Computer: '+ computer;
-    console.log(computer);
-
-    var player = Math.floor(Math.random()*max) + min;
-    document.getElementById('player').innerHTML='Player:'+ player;
-    console.log(player);
-
-    if (computer > player){
-      console.log('THE WINNER IS THE COMPUTER')
-        document.getElementById('result').innerHTML= 'THE WINNER IS THE COMPUTER ';
-    }
-
-    else if (computer==player) {
-      console.log('IT IS A DRAW')
-        document.getElementById('result').innerHTML= ' IT IS A DRAW ';
-
-    }
-
-    else {
-      console.log('THE WINNER IS THE PLAYER')
-      document.getElementById('result').innerHTML= ' THE WINNER IS THE PLAYER ';
-
-    }
+    // var min=0;
+    // var max=6-0;
+    //
+    // var computer = Math.floor(Math.random()*max) + min;
+    // document.getElementById('computer').innerHTML= 'Computer: '+ computer;
+    // console.log(computer);
+    //
+    // var player = Math.floor(Math.random()*max) + min;
+    // document.getElementById('player').innerHTML='Player:'+ player;
+    // console.log(player);
+    //
+    // if (computer > player){
+    //   console.log('THE WINNER IS THE COMPUTER')
+    //     document.getElementById('result').innerHTML= 'THE WINNER IS THE COMPUTER ';
+    // }
+    //
+    // else if (computer==player) {
+    //   console.log('IT IS A DRAW')
+    //     document.getElementById('result').innerHTML= ' IT IS A DRAW ';
+    //
+    // }
+    //
+    // else {
+    //   console.log('THE WINNER IS THE PLAYER')
+    //   document.getElementById('result').innerHTML= ' THE WINNER IS THE PLAYER ';
+    //
+    // }
 
 
     </script>
