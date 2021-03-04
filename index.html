@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>E-mail e Dadi</title>
+
+    <style media="screen">
+      h1,p {
+        color: red;
+        text-align: center;
+      }
+
+      p{
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>The GAMING is starting:</h1>
+    <p id="computer"></p>
+    <p id="player"></p>
+    <p id ="result"></p>
+    <script type="text/javascript">
+
+
+    // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
+    var min=0;
+    var max=6-0;
+
+    var computer = Math.floor(Math.random()*max) + min;
+    document.getElementById('computer').innerHTML= 'Computer: '+ computer;
+    console.log(computer);
+
+    var player = Math.floor(Math.random()*max) + min;
+    document.getElementById('player').innerHTML='Player:'+ player;
+    console.log(player);
+
+    if (computer > player){
+      console.log('THE WINNER IS THE COMPUTER')
+        document.getElementById('result').innerHTML= 'THE WINNER IS THE COMPUTER ';
+    }
+
+    else if (computer==player) {
+      console.log('IT IS A DRAW')
+        document.getElementById('result').innerHTML= ' IT IS A DRAW ';
+
+    }
+
+    else {
+      console.log('THE WINNER IS THE PLAYER')
+      document.getElementById('result').innerHTML= ' THE WINNER IS THE PLAYER ';
+
+    }
+
+
+    </script>
+
+  </body>
+</html>
