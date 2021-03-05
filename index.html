@@ -31,18 +31,18 @@
 
 
     //1 - Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato
-    //indici            0               1                  2                 3
+    //indici              0                  1                   2                    3
     var email = ['prova1@gmail.com', 'prova2@gmail.com', 'prova3@gmail.com', 'prova4@gmail.com' ]; //lenght 4
     var request = prompt(" Inserisci la tua email:  ");
+    var finded = false;
     for( var i=0; i<email.length; i++ ){
+       var mails = email[i];
       // console.log(i, email[i]);
-      if (request == email){
-        console.log('ACCESSO AUTORIZZATO');
+      if (mails == request){
+        finded = true;
       }
-
-      
     }
-
+    console.log(request, finded);
 
 
     // 2 - Generare un numero random da 1 a 6, sia per il giocatore sia per il compute. Stabilire il vincitore, in base a chi fa il punteggio più alto.
@@ -73,7 +73,7 @@
     //   document.getElementById('result').innerHTML= ' THE WINNER IS THE PLAYER ';
     //
     // }
-
+    //
 
     </script>
 
